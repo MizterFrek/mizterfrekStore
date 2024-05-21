@@ -1,6 +1,6 @@
 export enum ROUTE_LIST {
     HOME = '',
     SHOP = 'tienda',
-    PRODUCTS = 'productos',
+    PRODUCT = 'producto',
     ABOUT_US = 'sobre-nosotros',
 }

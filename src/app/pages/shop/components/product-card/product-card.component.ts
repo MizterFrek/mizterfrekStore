@@ -1,6 +1,6 @@
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Produc } from '../../../../core/contracts/models/product.interface';
+import { Product } from '../../../../core/contracts/models/product.interface';
 import { StarRatingComponent } from '../../../../shared/components/star-rating/star-rating.component';
 
 @Component({
@@ -15,5 +15,5 @@ import { StarRatingComponent } from '../../../../shared/components/star-rating/s
   styleUrl: './product-card.component.scss',
 })
 export class ProductCardComponent {
-  @Input({required: true}) product!: Produc;
+  @Input({required: true}) product!: Product;
 }

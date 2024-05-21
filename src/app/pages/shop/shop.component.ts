@@ -23,7 +23,7 @@ export class ShopComponent {
   public loading = signal<boolean>(true);
   public openSort = false;
 
-  products = this.api.products().pipe(
+  products = this.api.listAllProducts().pipe(
     tap(() => this.loading.set(false))
   );
 

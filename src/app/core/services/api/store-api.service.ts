@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Api } from '../../contracts/classes/Api';
 import { Observable } from 'rxjs';
-import { Produc } from '../../contracts/models/product.interface';
+import { Product } from '../../contracts/models/product.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StoreApiService extends Api {
   
-  public products():Observable<Produc[]> {
-    return this.http.get<Produc[]>(this.url('products'));
+  public listAllProducts():Observable<Product[]> {
+    return this.http.get<Product[]>(this.url('products'));
+  }
+
+  public getProduct(product: string): Observable<Product> {
+    return this.http.get<Product>(this.url(`products/${product}`));
   }
 }
