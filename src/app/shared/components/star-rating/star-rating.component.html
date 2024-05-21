@@ -1,0 +1,9 @@
+
+
+<div class="flex items-center justify-end py-1">
+
+    @for (star of stars; track $index) {
+        <svg aria-hidden="true" focusable="false" class="w-6 h-6"> <use [attr.xlink:href]="star"/> </svg>
+    }
+    <span class="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">{{rating.rate}}</span>
+</div>
