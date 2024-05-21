@@ -1,0 +1,22 @@
+<!-- Product Card -->
+<div class="flex flex-col p-4 sm:mb-0 mb-6 bg-white overflow-hidden rounded-lg border border-green-200 shadow-md h-full">
+    <div class="relative cursor-pointer">
+      <div class="rounded-lg h-64 overflow-hidden">
+        <img class="object-contain object-center h-full w-full" [src]="product.image" alt="product image" />
+      </div>
+      <!-- TODO: Descuento u oferta -->
+      <!-- <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span> -->
+    </div>
+    <h2 class="text-xl font-medium title-font text-gray-900 mt-5 cursor-pointer hover:text-green-600">{{product.title}}</h2>
+        
+    <div class="mt-auto">
+        <app-star-rating [rating]="product.rating"/>
+        <div>
+            <p class="mt-2">
+                <span class="text-xl font-bold text-green-500">{{product.price| currency: 'PEN'}}</span>
+                <!-- <span class="text-sm text-slate-900 line-through">$699</span> -->
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Product Card -->
