@@ -2,7 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Rating } from '../../../core/contracts/models/rating.interface';
 
-enum STAR { FULL = '#stars-full-star', HALF = '#stars-half-star', EMPTY = '#stars-empty-star' }
+enum STAR { 
+  FULL = 'w-4 h-4 text-yellow-600', 
+  HALF = 'w-4 h-4 text-yellow-200', 
+  EMPTY = 'w-4 h-4 text-gray-200' 
+}
 
 @Component({
   selector: 'app-star-rating',
