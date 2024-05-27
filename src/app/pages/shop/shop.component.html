@@ -177,7 +177,7 @@
         </div>
     </div>
 
-    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex items-baseline justify-between border-b border-green-400 pb-6 pt-14">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900">Producs</h1>
   
@@ -403,8 +403,24 @@
               <section class="text-gray-600 body-font">
                 <div class="container px-5 mx-auto">
                   <div class="grid grid-cols-3 gap-2">
-                    @for (product of (products | async); track $index) {
-                      <app-product-card [product]="product"/>
+                    @if(loading()) {
+                      @for(item of [0, 0, 0 ,0, 0, 0]; track $index) {
+                        <div class="animate-pulse flex flex-col p-4 sm:mb-0 mb-6 bg-white overflow-hidden rounded-lg h-full">
+  
+                          <div class="rounded-lg min-h-64 bg-gray-100"> </div>
+                          
+                          <div class="h-2 mt-4 bg-gray-100 rounded"></div>
+                        
+                          <div class="mt-4 flex flex-col">
+                              <div class="h-2 self-end w-3/4 bg-gray-100 rounded"></div>
+                              <div class="mt-4 h-4 self-start w-3/4 bg-gray-100 rounded"></div>
+                          </div>
+                        </div>
+                      }
+                    } @else {
+                      @for (product of products(); track $index) {
+                        <app-product-card [product]="product"/>
+                      }
                     }
                   </div>
                 </div>
@@ -412,7 +428,7 @@
             </div>
           </div>
         </section>
-    </main>
+    </section>
     
   </div>
   
