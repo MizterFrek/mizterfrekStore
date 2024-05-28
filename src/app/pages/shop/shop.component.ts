@@ -4,7 +4,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { StoreApiService } from '../../core/services/api/store-api.service';
 import { tap } from 'rxjs';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { Product } from '../../core/contracts/models/product.interface';
+import { Product } from '../../core/contracts/models/product.model';
 
 @Component({
   selector: 'app-shop',

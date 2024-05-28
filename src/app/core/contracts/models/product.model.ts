@@ -1,4 +1,4 @@
-import { Rating } from "./rating.interface";
+import { Rating } from "./rating.model";
 
 export interface Product {
     id:          number;

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { Rating } from '../../../core/contracts/models/rating.interface';
+import { Rating } from '../../../core/contracts/models/rating.model';
 
 enum STAR { 
   FULL = 'w-4 h-4 text-yellow-600', 

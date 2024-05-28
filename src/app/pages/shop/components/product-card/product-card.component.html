@@ -11,11 +11,16 @@
         
     <div class="mt-auto">
         <app-star-rating [rating]="product.rating"/>
-        <div>
-            <p class="mt-2">
+        <div class="mt-2 flex flex-row justify-between">
+            <p class="m-0">
                 <span class="text-xl font-bold text-green-500">{{product.price| currency: 'PEN'}}</span>
                 <!-- <span class="text-sm text-slate-900 line-through">$699</span> -->
             </p>
+            <button type="button" (click)="addOneProductToCart(product)" class="inline-flex text-white bg-green-500 border-0 py px-4 focus:outline-none hover:bg-green-600 active:bg-green-700 rounded">
+              <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"/>
+              </svg>              
+            </button>
         </div>
     </div>
 </div>

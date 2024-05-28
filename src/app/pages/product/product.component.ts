@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, Input, OnInit, signal } from '@angular/core';
-import { Product } from '../../core/contracts/models/product.interface';
+import { Product } from '../../core/contracts/models/product.model';
 import { StoreApiService } from '../../core/services/api/store-api.service';
 import { StarRatingComponent } from '../../shared/components/star-rating/star-rating.component';
 
